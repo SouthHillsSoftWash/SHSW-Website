@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const {
+    title,
+    description
+} = Astro.props;
+---
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <p class="hero-eyebrow">South Hills Soft Wash</p>
+            <h1>{title}</h1>
+            <p class="hero-description">{description}</p>
+
+            <div class="hero-actions">
+                <a href="/contact/" class="hero-button hero-button-primary">
+                    <span class="button-text">Get a Free Quote</span>
+                    <span class="button-bubbles" aria-hidden="true">
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                        <span class="bubble"></span>
+                    </span>
+                </a>
+                
+                <a href="/residential/" class="hero-button hero-button-secondary">Explore Services</a>
+            </div>
+        </div>
+    </div>
+</section>

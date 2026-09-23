@@ -1,0 +1,50 @@
+---
+interface Props {
+    before: string;
+    after: string;
+    alt: string;
+}
+
+const {before, after, alt} = Astro.props;
+---
+
+<div class="comparison">
+    <img 
+        class="comparison-before"
+        src={before}
+        alt={'Before: ${alt}'}    
+    />
+
+    <div class="comparison-after">
+        <img
+            src={after}
+            alt={`After: ${alt}`}
+        />
+    </div>
+
+    <div class="comparison-handle" aria-hidden="true">
+        <span>↔</span>
+    </div>
+
+    <span class="comparison-label comparison-label-before">Before</span>
+    <span class="comparison-label comparison-label-after">After</span>
+
+    <input
+        class="comparison-range"
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        aria-label={`Compare before and after: ${alt}`}
+    />
+</div>
+
+<script>
+    document.querySelectorAll<HTMLElement>(".comparison").forEach((comparison) => {
+        const range = comparison.querySelector<HTMLInputElement>(".comparison-range");
+
+        range?.addEventListener("input", () => {
+            comparison.style.setProperty("--position", `${range.value}%`);
+        });
+    });
+</script>

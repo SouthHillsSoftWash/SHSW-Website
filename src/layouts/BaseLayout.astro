@@ -1,0 +1,32 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+
+
+interface Props {
+    title: string;
+    description?: string;
+}
+
+const {
+    title,
+    description = "Professional residential and commercial exterior cleaning from South Hills Soft Wash."
+    } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content={description} />
+		<title>{title} | South Hills Soft Wash</title>
+	</head>
+
+	<body>
+        <Header />
+		<slot />
+	</body>
+</html>
+

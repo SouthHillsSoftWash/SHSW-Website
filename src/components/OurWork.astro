@@ -1,0 +1,130 @@
+---
+import BeforeAfterSlider from "./BeforeAfterSlider.astro";
+
+const featuredProjects = [
+    {
+        before: "/images/our-work/before_06.jpg",
+        after: "/images/our-work/after_06.jpg",
+        alt: "Exterior cleaning project 06",
+    },
+    {
+        before: "/images/our-work/before_02.jpg",
+        after: "/images/our-work/after_02.jpg",
+        alt: "Exterior cleaning project 02",
+    },
+    {
+        before: "/images/our-work/before_05.jpg",
+        after: "/images/our-work/after_05.jpg",
+        alt: "Exterior cleaning project 05",
+    },
+];
+---
+
+<section class="our-work">
+    <div class="our-work-container">
+
+        <div class="section-heading">
+            <p class="section-eyebrow">Our Work</p>
+            <h2>See the Difference</h2>
+            <p>
+                Explore real before-and-after results from South Hills Soft Wash.
+                Drag the slider to reveal the transformation.
+            </p>
+        </div>
+
+        <div class="work-carousel">
+
+            <div class="work-slides">
+                {featuredProjects.map((project, index) => (
+                    <div
+                        class="work-slide"
+                        hidden={index !== 0}
+                    >
+                        <BeforeAfterSlider
+                            before={project.before}
+                            after={project.after}
+                            alt={project.alt}
+                        />
+                    </div>
+                ))}
+            </div>
+
+            <div class="work-controls">
+                <button
+                    class="work-arrow"
+                    id="work-prev"
+                    type="button"
+                    aria-label="Previous project"
+                >
+                    &#8592;
+                </button>
+
+                <span class="work-counter" aria-live="polite">
+                    <span id="work-current">01</span>
+                    <span class="work-counter-divider">/</span>
+                    <span>03</span>
+                </span>
+
+                <button
+                    class="work-arrow"
+                    id="work-next"
+                    type="button"
+                    aria-label="Next project"
+                >
+                    &#8594;
+                </button>
+            </div>
+        </div>
+
+        <div class="work-footer">
+            <a href="/our-work/" class="work-view-all">
+                View All Our Work
+                <span aria-hidden="true">→</span>
+            </a>
+        </div>
+    </div> 
+
+    <div class="our-work-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path
+                d="M0,0
+                L1440,0
+                L1440,35
+                C1200,95 980,20 740,60
+                C480,100 260,15 0,65
+                Z"
+            />
+        </svg>
+    </div>
+</section>
+
+<script>
+    const slides = document.querySelectorAll<HTMLElement>(".work-slide");
+
+    const prevButton = document.querySelector<HTMLButtonElement>("#work-prev");
+    const nextButton = document.querySelector<HTMLButtonElement>("#work-next");
+
+    const currentCounter = document.querySelector<HTMLElement>("#work-current");
+
+    let currentIndex = 0;
+
+    function showSlide(index: number) {
+        currentIndex = (index + slides.length) % slides.length;
+
+        slides.forEach((slide, slideIndex) => {
+            slide.hidden = slideIndex !== currentIndex;
+        });
+
+        if (currentCounter) {
+            currentCounter.textContent = String(currentIndex + 1).padStart(2, "0");
+        }
+    }
+
+    prevButton?.addEventListener("click", () => {
+        showSlide(currentIndex - 1);
+    });
+
+    nextButton?.addEventListener("click", () => {
+        showSlide(currentIndex + 1);
+    });
+</script>

@@ -1,0 +1,94 @@
+<header class="site-header">
+    <div class="header-container">
+        <a href="/" class="logo">
+            <img
+                src="/images/logo.png"
+                alt="South Hills Soft Wash"
+            />
+        </a>
+
+        <nav 
+            id="main-navigation"
+            class="main-nav" 
+            aria-label="Main navigation">
+            <ul class="nav-list">
+
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="/about/">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="/about/who-we-are/">Who We Are</a></li>
+                        <li>
+                            <a href="/about/social-media/">Social Media</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="/residential/">Residential</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/residential/house-washing/">House Washing</a></li>
+                        <li><a href="/residential/roof-cleaning/">Roof Cleaning</a></li>
+                        <li><a href="/residential/gutter-cleaning/">Gutter Cleaning</a></li>
+                        <li><a href="/residential/driveway-cleaning/">Driveway Cleaning</a></li>
+                        <li><a href="/residential/fence-cleaning/">Fence Cleaning</a></li>
+                        <li><a href="/residential/deck-cleaning/">Deck Cleaning</a></li>
+                        <li><a href="/residential/rust-removal/">Rust Removal</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="/commercial/">Commercial</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/commercial/building-washing/">Building Washing</a></li>
+                        <li><a href="/commercial/storefront-cleaning/">Storefront Cleaning</a></li>
+                        <li><a href="/commercial/drive-thru-cleaning/">Drive Thru Cleaning</a></li>
+                        <li><a href="/commercial/parking-lot-garage-cleaning/">Parking Lot & Garage Cleaning</a></li>
+                        <li><a href="/commercial/apartment-complex-cleaning/">Exterior Apartment Complex Cleaning</a></li>
+                        <li><a href="/commercial/dumpster-pad-cleaning/">Dumpster Pad Cleaning</a></li>
+                        <li><a href="/commercial/graffiti-removal/">Graffiti Removal</a></li>
+                        <li><a href="/commercial/gas-station-cleaning/">Gas Station Cleaning</a></li>
+                        <li><a href="/commercial/post-construction-cleanup/">Post Construction Clean Up</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/our-work/">Our Work</a>
+                </li>
+
+                <li>
+                    <a href="/areas-served/">Areas Served</a>
+                </li>
+
+                <li>
+                    <a href="/contact/">Contact Us</a>
+                </li>
+
+            </ul>
+        </nav>
+        <a href="/contact/" class="quote-button">Get a Free Quote</a>
+        <button 
+            class="menu-toggle" 
+            type="button" 
+            aria-label="Open navigation menu"
+            aria-controls="main-navigation"
+            aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+<script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mainNav = document.querySelector(".main-nav");
+
+    menuToggle?.addEventListener("click", () => {
+        mainNav?.classList.toggle("is-open");
+    });
+</script>

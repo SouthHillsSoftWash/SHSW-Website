@@ -1,0 +1,74 @@
+---
+import ServiceCard from "./ServiceCard.astro"
+---
+
+<section class="popular-services">
+    <div class="popular-services-container">
+
+        <div class="section-heading">
+            <p class="section-eyebrow">Our Services</p>
+            <h2>Exterior Cleaning That Makes a Difference</h2>
+            <p>
+                Explore some of our most popular residential and commercial
+                exterior cleaning services.
+            </p>
+        </div>
+
+        <div class="popular-services-grid">
+            <ServiceCard
+                title="House Washing"
+                description="Remove dirt, grime, algae, and buildup to refresh the exterior of your home."
+                href="/residential/house-washing/"
+                category="Residential"
+            />
+
+            <ServiceCard
+                title="Roof Cleaning"
+                description="Professional exterior roof cleaning designed to restore a cleaner appearance."
+                href="/residential/roof-cleaning/"
+                category="Residential"
+            />
+
+            <ServiceCard
+                title="Driveway Cleaning"
+                description="Refresh concrete and paved surfaces by removing built-up dirt and exterior grime."
+                href="/residential/driveway-cleaning/"
+                category="Residential"
+            />
+
+            <ServiceCard
+                title="Building Washing"
+                description="Exterior cleaning for commercial buildings that helps maintain a clean, professional appearance."
+                href="/commercial/building-washing/"
+                category="Commercial"
+            />
+
+            <ServiceCard
+                title="Storefront Cleaning"
+                description="Keep storefront exteriors looking clean and welcoming for customers and visitors."
+                href="/commercial/storefront-cleaning/"
+                category="Commercial"
+            />
+
+            <ServiceCard
+                title="Parking Lot & Garage Cleaning"
+                description="Exterior surface cleaning for parking areas and garages at commercial properties."
+                href="/commercial/parking-lot-garage-cleaning/"
+                category="Commercial"
+            />
+        </div>
+    </div>
+
+    <div class="popular-services-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path
+                d="M0,55
+                C240,105 420,20 680,55
+                C940,90 1160,25 1440,65
+                L1440,120
+                L0,120
+                Z"
+            />
+        </svg>
+    </div>
+</section>
