@@ -873,7 +873,7 @@ a {
     transform: translateX(4px);
 }
 
-/* WHY CHOOSE US */
+/* Why choose us */
 
 .why-choose-us {
     position: relative;
@@ -949,7 +949,7 @@ a {
     fill: var(--teal);
 }
 
-/* BEFORE & AFTER */
+/* Before & After */
 
 .comparison {
     position: relative;
@@ -1198,7 +1198,7 @@ a {
     }
 }
 
-/* AREAS SERVED HERO */
+/* Areas Served */
 .areas-served {
     padding: 7rem 2rem;
     background-color: var(--white);
@@ -1276,7 +1276,7 @@ a {
     background-color: var(--white);
 }
 
-/* ===== OUR WORK ===== */
+/* our work section */
 
 .our-work {
     padding: 6rem 2rem;
@@ -1366,9 +1366,51 @@ a {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* ====== END OF HERO ====== */
+/* =========================  */
+/* ====== OUR WORK PAGE ===== */
+.work-page {
+    padding: 12rem 2rem 7rem;
+    background-color: var(--soft-blue);
+}
+
+.work-page-container {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
+.work-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem 2rem;
+    margin-top: 4rem;
+}
+
+.work-gallery-item {
+    min-width: 0;
+    padding: 1rem;
+    background-color: var(--white);
+    border: 1px solid rgba(66, 157, 142, 0.15);
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 25px rgba(28, 37, 35, 0.05);
+}
+
+.work-gallery-item .comparison {
+    border-radius: 0.75rem;
+}
+
+.work-gallery-item h2 {
+    margin-top: 1.25rem;
+    color: var(--teal);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+
 /* ===== MEDIA QUERIES ===== */
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     .main-nav{
         display: none;
     }
@@ -1433,32 +1475,66 @@ a {
         gap: 3rem;
     }
 
+    /* Responsive hero */
+
+    .hero {
+        aspect-ratio: auto;
+        min-height: 750px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
     .hero-content {
-        padding: 2rem;
-        transform: translateY(-3rem);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 12rem 2rem 9rem;
+        transform: none;
     }
 
-    .hero-actions {
-        gap: 0.6rem;
-        margin-top: 1.25rem;
-    }
-
-    .hero-button {
-        padding: 0.65rem 1rem;
-        font-size: 0.7rem;
+    .hero-text {
+        width: 100%;
+        max-width: 560px;
+        padding: 2.25rem;
+        text-align: center;
+        background-color: rgba(15, 30, 29, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 1.5rem;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
     }
 
     .hero-eyebrow {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
     }
 
     .hero h1 {
-        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
+        line-height: 1.1;
     }
 
     .hero-description {
-        margin-top: 1rem;
-        font-size: 0.95rem;
+        max-width: 500px;
+        margin-top: 1.25rem;
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .hero-button {
+        padding: 0.9rem 1.4rem;
+        font-size: 0.85rem;
+        white-space: nowrap;
     }
 
     .logo {
@@ -1548,9 +1624,50 @@ a {
     #service-map {
         height: 350px;
     }
+
+    .work-page {
+        padding: 10rem 1.5rem 5rem;
+    }
+
+    .work-gallery {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 600px) {
+    .hero {
+    min-height: 780px;
+    background-position: 40% center;
+    }
+
+    .hero-content {
+        padding: 10rem 1rem 8rem;
+    }
+
+    .hero-text {
+        padding: 1.5rem;
+        border-radius: 1.25rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.85rem;
+    }
+
+    .hero-button {
+        white-space: nowrap;
+    }
+
     #service-map {
         height: 350px;
     }

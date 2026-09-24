@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BeforeAfterSlider from "../components/BeforeAfterSlider.astro";
+
+const projects = Array.from({ length: 16 }, (_, index) => {
+    const number = String(index + 1).padStart(2, "0");
+
+    return {
+        before: `/images/our-work/before_${number}.jpg`,
+        after: `/images/our-work/after_${number}.jpg`,
+    };
+});
+---
+
+<BaseLayout title="Our Work | South Hills Soft Wash">
+
+    <section class="work-page">
+
+        <div class="work-page-container">
+
+            <div class="section-heading">
+                <p class="section-eyebrow">Real Results</p>
+                <h1>Our Work</h1>
+
+                <p>
+                    See the difference a professional exterior cleaning
+                    can make. Explore our before-and-after gallery.
+                </p>
+            </div>
+
+            <div class="work-gallery">
+                {projects.map((project) => (
+                    <article class="work-gallery-item">
+
+                        <BeforeAfterSlider
+                            before={project.before}
+                            after={project.after}
+                            alt={`Before and after exterior cleaning`}
+                        />
+
+                    </article>
+                ))}
+            </div>
+
+        </div>
+
+    </section>
+
+</BaseLayout>
