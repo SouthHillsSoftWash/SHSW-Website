@@ -1,6 +1,7 @@
 
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import FinalCTA from "../components/FinalCTA.astro";
 
 const services = [
     {
@@ -67,6 +68,18 @@ const services = [
                 cleaning services.
             </p>
         </div>
+
+        <svg
+            class="residential-hero-wave"
+            viewBox="0 0 1440 100"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+        >
+            <path
+                d="M0,35 C240,90 480,0 720,42 S1200,90 1440,30 L1440,100 L0,100 Z"
+            />
+        </svg>
+
     </section>
 
     <section class="residential-services">
@@ -114,4 +127,5 @@ const services = [
         </div>
     </section>
 
+    <FinalCTA />
 </BaseLayout>

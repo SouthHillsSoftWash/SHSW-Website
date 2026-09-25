@@ -1418,9 +1418,23 @@ a {
 }
 
 .residential-hero {
-    padding: 12rem 2rem 7rem;
+    position: relative;
+    padding: 12rem 2rem 9rem;
     background-color: var(--soft-blue);
     text-align: center;
+}
+
+.residential-hero-wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 90px;
+
+    fill: var(--white);
+    pointer-events: none;
 }
 
 .residential-hero h1 {
@@ -1572,9 +1586,30 @@ a {
 }
 
 .service-detail-hero {
-    padding: 11rem 2rem 6rem;
+    position: relative;
+    isolation: isolate;
+    padding: 12rem 2rem 9rem;
     background-color: var(--soft-blue);
+    text-align: left;
 }
+
+.service-detail-wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 90px;
+    fill: var(--white);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.service-detail-hero > .service-detail-container {
+    position: relative;
+    z-index: 1;
+}
+
 
 .service-back-link {
     display: inline-flex;
@@ -1648,10 +1683,22 @@ a {
 }
 
 .service-detail-cta {
+    position: relative;
+    isolation: isolate;
     padding: 6rem 2rem;
     background: linear-gradient(120deg, var(--teal), var(--green));
     color: var(--white);
     text-align: center;
+}
+
+.service-detail-cta-wave {
+    position: absolute;
+    bottom: calc(100% - 1px);
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 90px;
+    pointer-events: none;
 }
 
 .service-detail-cta h2 {
@@ -1884,10 +1931,6 @@ a {
     line-height: 1.85;
 }
 
-
-
-
-
 /* ===== MEDIA QUERIES ===== */
 
 @media (max-width: 1100px) {
@@ -2115,7 +2158,7 @@ a {
     }
 
     .residential-hero {
-        padding: 10rem 1.5rem 5rem;
+        padding: 10rem 1.5rem 7rem;
     }
 
     .residential-services {
@@ -2138,7 +2181,7 @@ a {
 
     
     .service-detail-hero {
-        padding: 10rem 1.5rem 4rem;
+        padding: 10rem 1.5rem 7rem;
     }
 
     .service-detail-main {
@@ -2227,6 +2270,18 @@ a {
 
     #service-map {
         height: 350px;
+    }
+
+    .service-detail-wave {
+            height: 45px;
+        }
+
+    .residential-hero-wave {
+        height: 45px;
+    }
+
+    .service-detail-cta-wave {
+        height: 45px;
     }
 }
 

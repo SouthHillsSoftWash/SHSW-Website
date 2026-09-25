@@ -1,0 +1,314 @@
+
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import ServiceFAQ from "../../components/ServiceFAQ.astro";
+
+const faqs = [
+    {
+        question: "What types of driveways can be cleaned?",
+        answer: "Common driveway materials include concrete, pavers, brick, and asphalt. Each material has different cleaning requirements, and the appropriate method depends on its condition, finish, and the type of buildup present."
+    },
+    {
+        question: "Can driveway cleaning remove oil stains?",
+        answer: "Oil and automotive-fluid stains may require targeted cleaning products and additional treatment. Results depend on the substance, how long it has been present, and how deeply it has penetrated the surface. Complete removal cannot always be guaranteed."
+    },
+    {
+        question: "Can you remove algae and green buildup?",
+        answer: "Exterior cleaning can address many types of organic buildup, including algae-related discoloration. The appropriate treatment depends on the driveway material and the extent of the growth."
+    },
+    {
+        question: "Is pressure washing safe for every driveway?",
+        answer: "No single pressure setting is appropriate for every surface. Weathered concrete, loose pavers, damaged mortar, asphalt, and decorative finishes may require different cleaning methods or additional care."
+    },
+    {
+        question: "Will cleaning remove rust stains?",
+        answer: "Some rust staining can be addressed using specialized treatments. Rust removal is a separate service, and the appropriate approach depends on the surface and the source of the stain."
+    },
+    {
+        question: "Can driveway cleaning repair cracks or damaged concrete?",
+        answer: "No. Cleaning addresses surface buildup and certain stains, but it does not repair cracks, spalling, loose pavers, or other structural and material damage."
+    },
+    {
+        question: "How often should I have my driveway cleaned?",
+        answer: "Cleaning frequency depends on traffic, surrounding vegetation, shade, moisture, and the amount of visible buildup. A driveway beneath trees may need attention more frequently than one with little environmental exposure."
+    },
+    {
+        question: "Do I need to move my vehicles before cleaning?",
+        answer: "The work area generally needs to be accessible. Discuss vehicle placement, outdoor items, and any preparation requirements with South Hills Soft Wash before your appointment."
+    },
+    {
+        question: "How can I request a driveway cleaning quote?",
+        answer: "Contact South Hills Soft Wash with your driveway's approximate size, material, and any particular stains or areas of concern. Photos can help communicate the condition of the surface."
+    }
+];
+---
+
+
+<ServiceLayout
+    title="Driveway Cleaning"
+    description="Refresh your driveway by addressing dirt, organic buildup, and surface staining with a cleaning approach suited to the material."
+    image="/images/residential/driveway_cleaning.jpg"
+>
+
+    <p class="section-eyebrow">Driveways & Hardscapes</p>
+
+    <h2>A Cleaner Welcome Home</h2>
+
+    <p>
+        Your driveway is one of the first things people notice
+        when approaching your property. Daily vehicle traffic,
+        changing weather, and outdoor exposure can leave behind
+        dirt, discoloration, and stubborn buildup.
+    </p>
+
+    <p>
+        Professional driveway cleaning helps restore a cleaner
+        appearance to suitable exterior surfaces. Whether your
+        driveway is concrete, pavers, brick, or another material,
+        the cleaning approach should account for its condition
+        and the type of staining present.
+    </p>
+
+    
+    <div slot="extra">
+
+        <!-- DRIVEWAY MATERIALS -->
+
+        <section class="service-info-section">
+            <div class="service-info-heading">
+                <p class="section-eyebrow">Surface Types</p>
+                <h2>Different Driveways, Different Cleaning Needs</h2>
+                <p>
+                    Driveway materials vary in texture, porosity,
+                    finish, and durability. Choosing the appropriate
+                    cleaning method starts with understanding the surface.
+                </p>
+            </div>
+
+            <div class="service-info-grid">
+
+                <div class="service-info-card">
+                    <span>01</span>
+                    <h3>Concrete Driveways</h3>
+                    <p>
+                        Concrete can accumulate dirt, tire marks,
+                        organic buildup, and automotive staining.
+                        Its age, condition, and finish influence
+                        the appropriate cleaning approach.
+                    </p>
+                </div>
+
+                <div class="service-info-card">
+                    <span>02</span>
+                    <h3>Paver Driveways</h3>
+                    <p>
+                        Pavers can collect grime across their
+                        surfaces and buildup between joints.
+                        Cleaning should account for joint
+                        material, stability, and any existing sealer.
+                    </p>
+                </div>
+
+                <div class="service-info-card">
+                    <span>03</span>
+                    <h3>Brick Surfaces</h3>
+                    <p>
+                        Brick driveways and paved areas may develop
+                        environmental staining and organic growth.
+                        The condition of the brick and mortar
+                        should be considered before cleaning.
+                    </p>
+                </div>
+
+                <div class="service-info-card">
+                    <span>04</span>
+                    <h3>Asphalt Driveways</h3>
+                    <p>
+                        Asphalt requires an approach appropriate
+                        for its surface and condition. Aggressive
+                        pressure or unsuitable cleaning products
+                        can affect certain asphalt finishes.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- COMMON DRIVEWAY BUILDUP -->
+
+        <section class="service-info-section service-info-split">
+
+            <div>
+                <p class="section-eyebrow">Common Driveway Concerns</p>
+                <h2>What's Building Up on Your Driveway?</h2>
+            </div>
+
+            <div class="service-info-copy">
+                <p>
+                    Driveways experience a combination of vehicle
+                    traffic, outdoor exposure, and moisture.
+                    Different types of buildup may require
+                    different cleaning treatments.
+                </p>
+
+                <ul class="service-check-list">
+                    <li>Ground-in dirt and environmental grime</li>
+                    <li>Algae and other organic buildup</li>
+                    <li>Dark discoloration in shaded or damp areas</li>
+                    <li>Tire marks and traffic-related staining</li>
+                    <li>Oil and automotive-fluid stains</li>
+                    <li>Rust staining from metal objects or runoff</li>
+                    <li>Leaves, pollen, and seasonal debris</li>
+                </ul>
+
+                <p>
+                    Some stains penetrate porous materials or
+                    become permanent over time. The type and age
+                    of a stain can affect the cleaning results.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- CLEANING APPROACH -->
+
+        <section class="service-info-section service-method-section">
+
+            <div class="service-info-heading">
+                <p class="section-eyebrow">The Cleaning Approach</p>
+                <h2>More Than Just High-Pressure Water</h2>
+            </div>
+
+            <div class="service-method-content">
+                <p>
+                    Effective driveway cleaning starts with
+                    identifying the surface material and the
+                    buildup that needs to be addressed.
+                </p>
+
+                <p>
+                    Suitable hard surfaces may be cleaned using
+                    pressure-washing equipment, surface-cleaning
+                    equipment, or targeted cleaning treatments.
+                    The appropriate combination depends on the
+                    material, its condition, and the cleaning goal.
+                </p>
+
+                <p>
+                    Stubborn automotive stains, rust, and other
+                    specialized discoloration may require
+                    additional treatment. Existing surface damage,
+                    deteriorated finishes, and deeply embedded
+                    stains may remain visible after cleaning.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- BENEFITS -->
+
+        <section class="service-info-section service-info-split">
+
+            <div>
+                <p class="section-eyebrow">Exterior Appearance</p>
+                <h2>Why Clean Your Driveway?</h2>
+            </div>
+
+            <div class="service-info-copy">
+                <p>
+                    A driveway is a major part of your property's
+                    exterior appearance. Keeping it clean can
+                    make the entrance to your home feel more
+                    inviting and well maintained.
+                </p>
+
+                <ul class="service-check-list">
+                    <li>Refreshes the appearance of exterior paving</li>
+                    <li>Addresses accumulated dirt and grime</li>
+                    <li>Helps manage suitable organic buildup</li>
+                    <li>Provides an opportunity to identify existing surface concerns</li>
+                    <li>Complements house washing and other exterior cleaning services</li>
+                </ul>
+
+                <p>
+                    Cleaning improves appearance but does not
+                    replace resurfacing, sealing, leveling,
+                    or repairs when those services are needed.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- PROCESS -->
+
+        <section class="service-info-section">
+
+            <div class="service-info-heading">
+                <p class="section-eyebrow">What to Expect</p>
+                <h2>Our Driveway Cleaning Process</h2>
+                <p>
+                    Every driveway is different. The cleaning
+                    plan depends on its material, condition,
+                    size, and areas of concern.
+                </p>
+            </div>
+
+            <div class="service-process-grid">
+
+                <div class="service-process-step">
+                    <span>01</span>
+                    <h3>Discuss Your Driveway</h3>
+                    <p>
+                        Tell us about the surface material,
+                        approximate size, visible buildup,
+                        and any stubborn stains.
+                    </p>
+                </div>
+
+                <div class="service-process-step">
+                    <span>02</span>
+                    <h3>Evaluate the Surface</h3>
+                    <p>
+                        Consider the material, existing
+                        condition, drainage, and the type
+                        of cleaning required.
+                    </p>
+                </div>
+
+                <div class="service-process-step">
+                    <span>03</span>
+                    <h3>Perform the Cleaning</h3>
+                    <p>
+                        Address the agreed-upon areas using
+                        equipment and cleaning methods
+                        appropriate for the surface.
+                    </p>
+                </div>
+
+                <div class="service-process-step">
+                    <span>04</span>
+                    <h3>Review the Results</h3>
+                    <p>
+                        Review the cleaned driveway and
+                        discuss any remaining staining
+                        or surface concerns.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FAQ -->
+
+        <ServiceFAQ faqs={faqs} />
+
+    </div>
+
+
+</ServiceLayout>

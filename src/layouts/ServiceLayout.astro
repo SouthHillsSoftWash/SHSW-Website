@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-
 interface Props {
     title: string;
     description: string;
@@ -23,8 +22,19 @@ const {title, description, image} = Astro.props;
             <p class="section-eyebrow">Residential Services</p>
             <h1>{title}</h1>
             <p>{description}</p>
-
+            
         </div>
+
+            <svg
+                class="service-detail-wave"
+                viewBox="0 0 1440 100"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+            >
+                <path
+                    d="M0,35 C240,90 480,0 720,42 S1200,90 1440,30 L1440,100 L0,100 Z"
+                />
+            </svg>
     </section>
 
     <section class="service-detail-main">
@@ -53,6 +63,26 @@ const {title, description, image} = Astro.props;
     </section>
 
     <section class="service-detail-cta">
+
+        <svg
+            class="service-detail-cta-wave"
+            viewBox="0 0 1440 100"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+        >
+            <defs>
+                <linearGradient id="service-cta-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#429D8E" />
+                    <stop offset="100%" stop-color="#73BF68" />
+                </linearGradient>
+            </defs>
+
+            <path
+                d="M0,35 C240,90 480,0 720,42 S1200,90 1440,30 L1440,100 L0,100 Z"
+                fill="url(#service-cta-gradient)"
+            />
+        </svg>
+
         <div class="service-detail-container">
             <h2>Ready to Refresh Your Property?</h2>
             <p>Get in touch with South Hills Soft Wash to request a free quote.</p>
@@ -62,6 +92,7 @@ const {title, description, image} = Astro.props;
                 <span aria-hidden="true">→</span>
             </a>
         </div>
+
     </section>
 
 </BaseLayout>
