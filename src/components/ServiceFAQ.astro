@@ -1,0 +1,43 @@
+
+---
+interface FAQ {
+    question: string;
+    answer: string;
+}
+
+interface Props {
+    title?: string;
+    faqs: FAQ[];
+}
+
+const {
+    title = "Frequently Asked Questions",
+    faqs
+} = Astro.props;
+---
+
+<section class="service-faq">
+    <div class="service-info-heading">
+        <p class="section-eyebrow">Good to Know</p>
+        <h2>{title}</h2>
+        <p>
+            Have questions? Here are a few things to know
+            before scheduling your service.
+        </p>
+    </div>
+
+    <div class="service-faq-list">
+        {faqs.map((faq) => (
+            <details class="service-faq-item">
+                <summary>
+                    <span>{faq.question}</span>
+                    <span class="service-faq-icon" aria-hidden="true">+</span>
+                </summary>
+
+                <div class="service-faq-answer">
+                    <p>{faq.answer}</p>
+                </div>
+            </details>
+        ))}
+    </div>
+</section>

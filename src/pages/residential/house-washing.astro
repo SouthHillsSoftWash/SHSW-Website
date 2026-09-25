@@ -1,0 +1,212 @@
+
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import ServiceFAQ from "../../components/ServiceFAQ.astro";
+
+const faqs = [
+    {
+        question: "What is the difference between soft washing and pressure washing?",
+        answer: "Soft washing uses low-pressure application and cleaning solutions to address exterior buildup. Traditional pressure washing relies more heavily on water pressure. The appropriate method depends on the surface, its condition, and the type of cleaning needed."
+    },
+    {
+        question: "What types of siding can be cleaned?",
+        answer: "House washing can be suitable for a variety of exterior materials, including vinyl siding and certain painted, masonry, and stucco surfaces. The appropriate cleaning method should be determined by the material and its condition."
+    },
+    {
+        question: "Can house washing remove green buildup from siding?",
+        answer: "Green discoloration is often associated with algae or other organic growth. Exterior cleaning can help address this type of buildup, although results depend on the surface and the nature of the staining."
+    },
+    {
+        question: "How often should I have my house washed?",
+        answer: "There is no single schedule that works for every home. Factors such as shade, moisture, surrounding trees, weather exposure, and the amount of visible buildup can all affect how frequently cleaning is needed."
+    },
+    {
+        question: "Do I need to be home during the service?",
+        answer: "Please discuss access and scheduling arrangements with South Hills Soft Wash when requesting your quote. Requirements may vary depending on the property and the work being performed."
+    },
+    {
+        question: "Should I prepare anything before my house washing appointment?",
+        answer: "It is helpful to discuss outdoor furniture, decorations, access points, landscaping, and any areas of concern before the appointment. South Hills Soft Wash can provide preparation instructions specific to your property."
+    },
+    {
+        question: "Can house washing remove every stain?",
+        answer: "Not all discoloration is removable through routine exterior cleaning. Permanent staining, oxidation, deteriorated finishes, and certain material conditions may require a different treatment or may not be fully reversible."
+    },
+    {
+        question: "How can I get a quote?",
+        answer: "Contact South Hills Soft Wash with information about your property and the areas you would like cleaned. The team can discuss your needs and provide a free quote."
+    }
+];
+---
+
+<ServiceLayout
+    title="House Washing"
+    description="Give your home's exterior a refreshed appearance with professional house washing."
+    image="/images/residential/house_washing.jpg"
+>
+
+    <p class="section-eyebrow">Exterior Home Cleaning</p>
+
+    <h2>A Fresh Look for Your Home</h2>
+
+    <p>
+        Your home's exterior is constantly exposed to the elements.
+        Over time, dirt and buildup can affect its appearance.
+    </p>
+
+    <p>
+        South Hills Soft Wash offers house washing services to help
+        refresh your home's exterior.
+    </p>
+
+    
+    <div slot="extra">
+
+        <section class="service-info-section">
+            <div class="service-info-heading">
+                <p class="section-eyebrow">Exterior Surfaces</p>
+                <h2>What Can We Clean?</h2>
+                <p>
+                    From siding to exterior details, house washing helps
+                    refresh the surfaces that make up your home's exterior.
+                </p>
+            </div>
+
+            <div class="service-info-grid">
+                <div class="service-info-card">
+                    <span>01</span>
+                    <h3>Vinyl Siding</h3>
+                    <p>Cleaning exterior siding affected by dirt, discoloration, and outdoor buildup.</p>
+                </div>
+
+                <div class="service-info-card">
+                    <span>02</span>
+                    <h3>Brick & Masonry</h3>
+                    <p>Cleaning appropriate masonry surfaces using methods suited to the material.</p>
+                </div>
+
+                <div class="service-info-card">
+                    <span>03</span>
+                    <h3>Stucco & Painted Exteriors</h3>
+                    <p>Addressing exterior buildup while considering the condition of the finish.</p>
+                </div>
+
+                <div class="service-info-card">
+                    <span>04</span>
+                    <h3>Exterior Trim & Details</h3>
+                    <p>Refreshing compatible trim, soffits, fascia, and other exterior features.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-info-section service-info-split">
+            <div>
+                <p class="section-eyebrow">Common Exterior Buildup</p>
+                <h2>More Than Just Dirt</h2>
+            </div>
+
+            <div class="service-info-copy">
+                <p>
+                    Your home's exterior is exposed to changing weather,
+                    moisture, shade, and airborne debris throughout the year.
+                    These conditions can contribute to visible buildup.
+                </p>
+
+                <ul class="service-check-list">
+                    <li>Dirt and environmental grime</li>
+                    <li>Algae and mildew-related staining</li>
+                    <li>Organic buildup on shaded surfaces</li>
+                    <li>Spider webs and other exterior debris</li>
+                    <li>General discoloration from outdoor exposure</li>
+                </ul>
+
+                <p>
+                    The appropriate cleaning method depends on the surface,
+                    its condition, and the type of buildup present.
+                </p>
+            </div>
+        </section>
+
+        <section class="service-info-section service-method-section">
+            <div class="service-info-heading">
+                <p class="section-eyebrow">The Cleaning Approach</p>
+                <h2>Why Soft Washing?</h2>
+            </div>
+
+            <div class="service-method-content">
+                <p>
+                    Soft washing uses a low-pressure application of cleaning
+                    solutions rather than relying primarily on high-pressure
+                    water to remove buildup.
+                </p>
+
+                <p>
+                    This approach is commonly used for exterior materials
+                    where excessive pressure could cause damage. Cleaning
+                    solutions and application methods should be selected
+                    according to the surface and its condition.
+                </p>
+
+                <p>
+                    Not every exterior surface requires the same treatment.
+                    The goal is to choose an appropriate method for the
+                    material being cleaned.
+                </p>
+            </div>
+        </section>
+
+        <section class="service-info-section">
+            <div class="service-info-heading">
+                <p class="section-eyebrow">What to Expect</p>
+                <h2>Our House Washing Process</h2>
+                <p>
+                    Every property is different, but here's a general
+                    overview of what a house washing service involves.
+                </p>
+            </div>
+
+            <div class="service-process-grid">
+                <div class="service-process-step">
+                    <span>01</span>
+                    <h3>Discuss Your Property</h3>
+                    <p>
+                        Tell us about your home's exterior, the areas
+                        you'd like cleaned, and any specific concerns.
+                    </p>
+                </div>
+
+                <div class="service-process-step">
+                    <span>02</span>
+                    <h3>Evaluate the Surfaces</h3>
+                    <p>
+                        The materials, condition, and type of buildup
+                        help determine the appropriate cleaning approach.
+                    </p>
+                </div>
+
+                <div class="service-process-step">
+                    <span>03</span>
+                    <h3>Exterior Cleaning</h3>
+                    <p>
+                        The applicable cleaning method is used to
+                        address buildup on the agreed-upon surfaces.
+                    </p>
+                </div>
+
+                <div class="service-process-step">
+                    <span>04</span>
+                    <h3>Final Review</h3>
+                    <p>
+                        Review the completed work and discuss any
+                        questions about your home's exterior.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <ServiceFAQ faqs={faqs} />
+
+    </div>
+
+
+</ServiceLayout>
