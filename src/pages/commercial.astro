@@ -1,0 +1,162 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FinalCTA from "../components/FinalCTA.astro";
+
+const commercialServices = [
+    {
+        number: "01",
+        title: "Building Washing",
+        description:
+            "Help maintain a clean, professional exterior with commercial building washing designed to remove dirt, organic buildup, and exterior grime from a variety of building surfaces.",
+        image: "/images/commercial/building.jpg",
+        link: "/commercial/building-washing/",
+    },
+    {
+        number: "02",
+        title: "Storefront Cleaning",
+        description:
+            "Keep your business looking welcoming from the street with exterior storefront cleaning for entrances, walls, walkways, and other customer-facing surfaces.",
+        image: "/images/commercial/storefront.jpg",
+        link: "/commercial/storefront-cleaning/",
+    },
+    {
+        number: "03",
+        title: "Drive-Thru Cleaning",
+        description:
+            "Clean high-traffic drive-thru areas where vehicle traffic, weather, spills, and everyday use can leave exterior surfaces looking worn and dirty.",
+        image: "/images/commercial/drivethru.png",
+        link: "/commercial/drive-thru-cleaning/",
+    },
+    {
+        number: "04",
+        title: "Parking Lot & Garage Cleaning",
+        description:
+            "Refresh parking areas and garages by addressing accumulated dirt, grime, and buildup across heavily used exterior surfaces.",
+        image: "/images/commercial/parking_garage.jpg",
+        link: "/commercial/parking-lot-garage-cleaning/",
+    },
+    {
+        number: "05",
+        title: "Exterior Apartment Complex Cleaning",
+        description:
+            "Maintain a cleaner exterior throughout multi-unit properties with cleaning for building exteriors and shared outdoor areas around apartment communities.",
+        image: "/images/commercial/apartment_complex.jpg",
+        link: "/commercial/apartment-complex-cleaning/",
+    },
+    {
+        number: "06",
+        title: "Dumpster Pad Cleaning",
+        description:
+            "Address grime and buildup around dumpster pads and surrounding surfaces to help keep these frequently used areas looking cleaner and better maintained.",
+        image: "/images/commercial/dumpster_cleaning.jpg",
+        link: "/commercial/dumpster-pad-cleaning/",
+    },
+    {
+        number: "07",
+        title: "Graffiti Removal",
+        description:
+            "Graffiti removal services for qualifying exterior surfaces, with the cleaning approach selected according to the affected material and condition.",
+        image: "/images/commercial/graffiti.jpg",
+        link: "/commercial/graffiti-removal/",
+    },
+    {
+        number: "08",
+        title: "Gas Station Cleaning",
+        description:
+            "Exterior cleaning for high-traffic gas station properties, including qualifying building surfaces, pavement, and other outdoor areas that experience frequent use.",
+        image: "/images/commercial/gas_station.png",
+        link: "/commercial/gas-station-cleaning/",
+    },
+    {
+        number: "09",
+        title: "Post-Construction Cleanup",
+        description:
+            "Exterior cleanup for qualifying post-construction projects to help prepare newly completed or renovated properties for their next stage of use.",
+        image: "/images/commercial/post_construction.jpg",
+        link: "/commercial/post-construction-cleanup/",
+    },
+];
+---
+
+<BaseLayout title="Commercial Cleaning Services | South Hills Soft Wash">
+    <!-- Commercial Hero -->
+    <section class="commercial-hero">
+        <div class="commercial-container">
+            <p class="section-eyebrow">Commercial Services</p>
+
+            <h1>Professional Exterior Cleaning for Your Business</h1>
+
+            <p>
+                From storefronts and commercial buildings to high-traffic
+                exterior areas, South Hills Soft Wash provides exterior cleaning
+                services for businesses and commercial properties throughout the
+                South Hills and surrounding communities.
+            </p>
+        </div>
+
+        <svg
+            class="commercial-hero-wave"
+            viewBox="0 0 1440 100"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+        >
+            <path
+                d="M0,35 C240,90 480,0 720,42 S1200,90 1440,30 L1440,100 L0,100 Z"
+            ></path>
+        </svg>
+    </section>
+
+    <!-- Commercial Services -->
+    <section class="commercial-services">
+        <div class="commercial-container">
+            {
+                commercialServices.map((service, index) => (
+                    <article
+                        class:list={[
+                            "commercial-service",
+                            index % 2 !== 0 && "commercial-service-reverse",
+                        ]}
+                    >
+                        <div class="commercial-service-content">
+                            <span class="commercial-service-number">
+                                {service.number}
+                            </span>
+
+                            <h2>{service.title}</h2>
+
+                            <p>{service.description}</p>
+
+                            <div class="commercial-service-actions">
+                                <a
+                                    href={service.link}
+                                    class="commercial-detail-link"
+                                >
+                                    Learn More
+                                    <span aria-hidden="true">→</span>
+                                </a>
+
+                                <a
+                                    href="/contact/"
+                                    class="commercial-service-link"
+                                >
+                                    Request a Quote
+                                    <span aria-hidden="true">→</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="commercial-service-visual">
+                            <img
+                                src={service.image}
+                                alt={`${service.title} by South Hills Soft Wash`}
+                                loading="lazy"
+                            />
+                        </div>
+                    </article>
+                ))
+            }
+        </div>
+    </section>
+
+    <FinalCTA />
+</BaseLayout>

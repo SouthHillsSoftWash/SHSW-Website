@@ -1,0 +1,370 @@
+---
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import ServiceFAQ from "../../components/ServiceFAQ.astro";
+
+const faqs = [
+    {
+        question: "What types of commercial buildings can be cleaned?",
+        answer: "Building washing may be appropriate for many types of commercial properties. The building materials, condition, accessibility, and requested cleaning areas should be evaluated when determining the appropriate scope of work."
+    },
+    {
+        question: "What exterior surfaces can be cleaned?",
+        answer: "Commercial buildings can include several different exterior materials, each with its own cleaning requirements. The appropriate method depends on the surface, its condition, and the type of buildup being addressed."
+    },
+    {
+        question: "Do you use the same cleaning method on every surface?",
+        answer: "No. Different exterior materials can require different cleaning methods. The cleaning approach should be selected according to the material, its condition, and the buildup present rather than treating every surface the same way."
+    },
+    {
+        question: "Can building washing remove algae and organic buildup?",
+        answer: "Exterior cleaning can address many types of suitable organic buildup and related discoloration. Results depend on the surface, the extent of the buildup, and the underlying condition of the material."
+    },
+    {
+        question: "Will cleaning remove every exterior stain?",
+        answer: "Not every type of discoloration is caused by removable surface buildup. Permanent staining, oxidation, weathering, damaged finishes, and other material changes may remain after cleaning."
+    },
+    {
+        question: "Can I request cleaning for only part of my building?",
+        answer: "If particular exterior areas need attention, include them when requesting your quote. The requested areas can be evaluated individually when determining the appropriate scope of work."
+    },
+    {
+        question: "How often should a commercial building be cleaned?",
+        answer: "Cleaning frequency depends on factors such as weather exposure, surrounding vegetation, nearby traffic, building materials, moisture, and the appearance standards of the property."
+    },
+    {
+        question: "Can entrances and other high-traffic areas be included?",
+        answer: "Commercial properties often include several exterior areas in addition to the main building surfaces. Mention entrances, walkways, or other areas you would like addressed when requesting your quote so they can be considered as part of the project."
+    },
+    {
+        question: "How do I request a commercial building washing quote?",
+        answer: "Contact South Hills Soft Wash with information about the property, the exterior areas you would like cleaned, and any particular concerns. Photos can also help communicate the condition and scope of the requested work."
+    }
+];
+---
+
+<ServiceLayout
+    title="Building Washing"
+    description="Exterior cleaning for commercial buildings to address dirt, organic buildup, and everyday exterior grime using methods suited to the surfaces being cleaned."
+    image="/images/commercial/building.jpg"
+    category="Commercial"
+>
+
+    <p class="section-eyebrow">Commercial Building Washing</p>
+
+    <h2>Keep Your Building Looking Its Best</h2>
+
+    <p>
+        Your building's exterior is one of the first things customers,
+        tenants, employees, and visitors see. Over time, exposure to weather,
+        moisture, dirt, and surrounding environmental conditions can leave
+        exterior surfaces looking stained or neglected.
+    </p>
+
+    <p>
+        Commercial building washing helps address suitable exterior buildup
+        while accounting for the different materials and conditions found
+        throughout the property.
+    </p>
+
+
+    <div slot="extra">
+
+        <!-- EXTERIOR AREAS -->
+
+        <section class="service-info-section">
+
+            <div class="service-info-heading">
+
+                <p class="section-eyebrow">Exterior Areas</p>
+
+                <h2>Cleaning Throughout Your Commercial Property</h2>
+
+                <p>
+                    Commercial properties can include a variety of exterior
+                    surfaces and high-visibility areas. Each area should be
+                    evaluated according to its material, condition, and
+                    cleaning needs.
+                </p>
+
+            </div>
+
+
+            <div class="service-info-grid">
+
+                <div class="service-info-card">
+
+                    <span>01</span>
+
+                    <h3>Building Exteriors</h3>
+
+                    <p>
+                        Addressing suitable dirt, grime, and organic buildup
+                        across compatible exterior building surfaces.
+                    </p>
+
+                </div>
+
+
+                <div class="service-info-card">
+
+                    <span>02</span>
+
+                    <h3>Entrances</h3>
+
+                    <p>
+                        Refreshing qualifying exterior surfaces around
+                        entrances and other highly visible areas of the
+                        property.
+                    </p>
+
+                </div>
+
+
+                <div class="service-info-card">
+
+                    <span>03</span>
+
+                    <h3>Walkways & Common Areas</h3>
+
+                    <p>
+                        Addressing applicable buildup in exterior areas
+                        frequently used by customers, tenants, employees,
+                        and visitors.
+                    </p>
+
+                </div>
+
+
+                <div class="service-info-card">
+
+                    <span>04</span>
+
+                    <h3>High-Traffic Areas</h3>
+
+                    <p>
+                        Focusing attention on compatible surfaces affected
+                        by frequent foot traffic, nearby vehicles, weather,
+                        and everyday commercial activity.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMMON BUILDUP -->
+
+        <section class="service-info-section service-info-split">
+
+            <div>
+
+                <p class="section-eyebrow">Common Exterior Concerns</p>
+
+                <h2>What's Building Up on Your Property?</h2>
+
+            </div>
+
+
+            <div class="service-info-copy">
+
+                <p>
+                    Commercial buildings are continuously exposed to weather,
+                    moisture, nearby traffic, airborne debris, and surrounding
+                    vegetation. Over time, these conditions can affect the
+                    appearance of exterior surfaces.
+                </p>
+
+                <ul class="service-check-list">
+
+                    <li>Dirt and environmental grime</li>
+                    <li>Green algae and organic buildup</li>
+                    <li>Dark discoloration in damp or shaded areas</li>
+                    <li>Pollen and seasonal debris</li>
+                    <li>Traffic-related exterior grime</li>
+                    <li>Weather-related surface buildup</li>
+
+                </ul>
+
+                <p>
+                    Some discoloration may instead be related to oxidation,
+                    aging, damaged coatings, permanent staining, or changes
+                    within the material itself. Cleaning may improve the
+                    appearance without reversing those conditions.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLEANING APPROACH -->
+
+        <section class="service-info-section service-method-section">
+
+            <div class="service-info-heading">
+
+                <p class="section-eyebrow">The Cleaning Approach</p>
+
+                <h2>Different Surfaces Need Different Care</h2>
+
+            </div>
+
+
+            <div class="service-method-content">
+
+                <p>
+                    Commercial buildings can contain several exterior
+                    materials, and treating every surface the same way
+                    may not be appropriate.
+                </p>
+
+                <p>
+                    The cleaning method should account for the material,
+                    existing finish, condition of the surface, accessibility,
+                    and the type of buildup being addressed.
+                </p>
+
+                <p>
+                    Evaluating these factors helps determine an appropriate
+                    cleaning approach for the specific areas included in
+                    the project.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROPERTY APPEARANCE -->
+
+        <section class="service-info-section service-info-split">
+
+            <div>
+
+                <p class="section-eyebrow">Property Appearance</p>
+
+                <h2>A Cleaner Exterior Makes a Difference</h2>
+
+            </div>
+
+
+            <div class="service-info-copy">
+
+                <p>
+                    The exterior of a commercial property contributes to the
+                    overall impression it gives customers, tenants, employees,
+                    and visitors.
+                </p>
+
+                <ul class="service-check-list">
+
+                    <li>Refreshes the appearance of exterior surfaces</li>
+                    <li>Addresses suitable dirt and organic buildup</li>
+                    <li>Improves the appearance of high-visibility areas</li>
+                    <li>Supports ongoing exterior property maintenance</li>
+                    <li>Helps keep customer-facing areas looking cared for</li>
+
+                </ul>
+
+                <p>
+                    Exterior cleaning does not replace repairs, painting,
+                    coating restoration, or replacement of damaged building
+                    materials.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROCESS -->
+
+        <section class="service-info-section">
+
+            <div class="service-info-heading">
+
+                <p class="section-eyebrow">What to Expect</p>
+
+                <h2>Our Building Washing Process</h2>
+
+                <p>
+                    Every commercial property is different. Building
+                    materials, condition, accessibility, and the requested
+                    areas help determine the appropriate cleaning plan.
+                </p>
+
+            </div>
+
+
+            <div class="service-process-grid">
+
+                <div class="service-process-step">
+
+                    <span>01</span>
+
+                    <h3>Discuss the Property</h3>
+
+                    <p>
+                        Tell us about the building, the areas you would like
+                        cleaned, and any specific exterior concerns.
+                    </p>
+
+                </div>
+
+
+                <div class="service-process-step">
+
+                    <span>02</span>
+
+                    <h3>Evaluate the Surfaces</h3>
+
+                    <p>
+                        Consider the materials, condition, accessibility,
+                        and type of buildup before determining an appropriate
+                        cleaning approach.
+                    </p>
+
+                </div>
+
+
+                <div class="service-process-step">
+
+                    <span>03</span>
+
+                    <h3>Perform the Cleaning</h3>
+
+                    <p>
+                        Address the agreed-upon areas using methods appropriate
+                        for the surfaces and their condition.
+                    </p>
+
+                </div>
+
+
+                <div class="service-process-step">
+
+                    <span>04</span>
+
+                    <h3>Review the Results</h3>
+
+                    <p>
+                        Review the cleaned areas and discuss any remaining
+                        staining, weathering, or exterior surface concerns.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FAQ -->
+
+        <ServiceFAQ faqs={faqs} />
+
+    </div>
+
+</ServiceLayout>

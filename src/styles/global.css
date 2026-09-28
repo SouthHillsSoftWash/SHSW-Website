@@ -1931,7 +1931,187 @@ a {
     line-height: 1.85;
 }
 
+/* ====== END OF SERVICE DETAIL PAGEs ====== */
+/* =========================  */
+/* ====== COMMERCIAL PAGE  ===== */
+
+.commercial-container {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
+/* Commercial Hero */
+
+.commercial-hero {
+    position: relative;
+    padding: 12rem 2rem 9rem;
+    background-color: var(--soft-blue);
+    text-align: center;
+}
+
+.commercial-hero h1 {
+    margin-top: 0.75rem;
+    color: var(--teal);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+}
+
+.commercial-hero .commercial-container > p:last-child {
+    max-width: 700px;
+    margin: 1.5rem auto 0;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Hero Wave */
+
+.commercial-hero-wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 90px;
+
+    fill: var(--white);
+    pointer-events: none;
+}
+
+/* Commercial Service List */
+
+.commercial-services {
+    padding: 6rem 2rem 11rem;
+    background-color: var(--white);
+}
+
+.commercial-service {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 4rem;
+    padding: 4rem 0;
+    scroll-margin-top: 9rem;
+}
+
+.commercial-service + .commercial-service {
+    border-top: 1px solid rgba(66, 157, 142, 0.15);
+}
+
+/* Alternating Layout */
+
+.commercial-service-reverse .commercial-service-content {
+    order: 2;
+}
+
+/* Service Content */
+
+.commercial-service-number {
+    color: var(--teal);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.commercial-service h2 {
+    margin-top: 0.75rem;
+    font-size: clamp(2rem, 3vw, 2.75rem);
+    line-height: 1.15;
+}
+
+.commercial-service-content > p {
+    max-width: 480px;
+    margin-top: 1.25rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* Service Images */
+
+.commercial-service-visual {
+    min-height: 340px;
+    aspect-ratio: 4 / 3;
+    background-color: var(--soft-blue);
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.commercial-service-visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Service Actions */
+
+.commercial-service-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-top: 1.75rem;
+}
+
+.commercial-detail-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: var(--teal);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.commercial-detail-link span {
+    transition: transform 0.25s ease;
+}
+
+.commercial-detail-link:hover span {
+    transform: translateX(5px);
+}
+
+.commercial-service-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    padding: 0.65rem 1.15rem;
+
+    border: 1px solid rgba(66, 157, 142, 0.35);
+    border-radius: 0.65rem;
+
+    background-color: rgba(66, 157, 142, 0.08);
+    color: var(--teal);
+
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.commercial-service-link:hover {
+    background-color: rgba(66, 157, 142, 0.16);
+    border-color: var(--teal);
+    transform: translateY(-2px);
+}
+
+/* ===== END OF COMMERCIAL PAGE ===== */
+/* ========================= */
+
+
+/* ===== ============= ===== */
+/* ===== ============= ===== */
 /* ===== MEDIA QUERIES ===== */
+/* ===== ============= ===== */
+/* ===== ============= ===== */
 
 @media (max-width: 1100px) {
     .main-nav{
@@ -2281,6 +2461,32 @@ a {
     }
 
     .service-detail-cta-wave {
+        height: 45px;
+    }
+
+    .commercial-hero {
+        padding: 10rem 1.5rem 7rem;
+    }
+
+    .commercial-services {
+        padding: 3rem 1.5rem 8rem;
+    }
+
+    .commercial-service {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 3rem 0;
+    }
+
+    .commercial-service-reverse .commercial-service-content {
+        order: 0;
+    }
+
+    .commercial-service-visual {
+        min-height: 260px;
+    }  
+    
+    .commercial-hero-wave {
         height: 45px;
     }
 }
