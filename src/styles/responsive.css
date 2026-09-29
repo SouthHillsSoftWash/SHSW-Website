@@ -178,6 +178,40 @@
         margin-right: auto;
     }
 
+    .about-story-grid,
+    .about-family-grid,
+    .about-frog-grid,
+    .about-social-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .about-story-copy {
+        order: -1;
+    }
+
+    .about-story-image {
+        max-width: 700px;
+    }
+
+    .about-story-year {
+        right: 1.5rem;
+    }
+
+    .about-values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-value-card {
+        min-height: 0;
+    }
+
+    .about-frog-art {
+        min-height: 400px;
+    }
+
+    
+
 }
 
 @media (max-width: 768px) {
@@ -378,6 +412,454 @@
     .commercial-hero-wave {
         height: 45px;
     }
+
+    .about-container {
+        width: min(1200px, calc(100% - 4rem));
+        margin: 0 auto;
+    }
+
+
+    /* ABOUT HERO */
+
+    .about-hero {
+        position: relative;
+        isolation: isolate;
+        padding: 12rem 2rem 9rem;
+        background: var(--soft-blue);
+        overflow: hidden;
+    }
+
+    .about-hero-content {
+        position: relative;
+        z-index: 1;
+    }
+
+    .about-hero-copy {
+        max-width: 850px;
+    }
+
+    .about-hero h1 {
+        margin: 0 0 1.75rem;
+        color: var(--text-dark);
+        font-size: clamp(3rem, 6vw, 5.75rem);
+        line-height: 0.98;
+        letter-spacing: -0.045em;
+    }
+
+    .about-hero h1 span,
+    .about-story-copy h2 span,
+    .about-family-copy h2 span,
+    .about-section-heading h2 span,
+    .about-frog-copy h2 span,
+    .about-social-copy h2 span {
+        color: var(--teal);
+    }
+
+    .about-hero-description {
+        max-width: 700px;
+        margin: 0;
+        color: var(--text-light);
+        font-size: 1.15rem;
+        line-height: 1.8;
+    }
+
+    .about-hero-wave {
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        display: block;
+        width: 100%;
+        height: 90px;
+        fill: var(--white);
+    }
+
+
+    /* WHO WE ARE */
+
+    .about-story {
+        padding: 7rem 0 8rem;
+        background: var(--white);
+    }
+
+    .about-story-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+        gap: 6rem;
+        align-items: center;
+    }
+
+    .about-story-image {
+        position: relative;
+    }
+
+    .about-story-image img {
+        display: block;
+        width: 100%;
+        min-height: 550px;
+        object-fit: cover;
+        border-radius: 2rem;
+    }
+
+    .about-story-year {
+        position: absolute;
+        right: -2rem;
+        bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        min-width: 180px;
+        padding: 1.4rem 1.6rem;
+        border-radius: 1.25rem;
+        background: var(--white);
+        box-shadow: 0 18px 45px rgba(28, 37, 35, 0.14);
+    }
+
+    .about-story-year strong {
+        color: var(--teal);
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    .about-story-year span {
+        margin-top: 0.4rem;
+        color: var(--text-light);
+        font-size: 0.85rem;
+    }
+
+    .about-story-copy h2,
+    .about-family-copy h2,
+    .about-section-heading h2,
+    .about-frog-copy h2,
+    .about-social-copy h2 {
+        margin: 0 0 1.75rem;
+        color: var(--text-dark);
+        font-size: clamp(2.4rem, 4vw, 4rem);
+        line-height: 1.05;
+        letter-spacing: -0.035em;
+    }
+
+    .about-story-copy > p:not(.section-eyebrow),
+    .about-family-copy > p:not(.section-eyebrow),
+    .about-frog-copy > p:not(.section-eyebrow),
+    .about-social-copy > p:not(.section-eyebrow) {
+        color: var(--text-light);
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+
+    /* FAMILY RUN */
+
+    .about-family {
+        padding: 8rem 0;
+        background: var(--off-white);
+    }
+
+    .about-family-grid {
+        display: grid;
+        grid-template-columns: 0.85fr 1fr;
+        gap: 6rem;
+        align-items: center;
+    }
+
+    .about-family-visual {
+        position: relative;
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    .about-family-card {
+        position: relative;
+        padding: 2.25rem;
+        border: 1px solid rgba(66, 157, 142, 0.15);
+        border-radius: 1.5rem;
+        background: var(--white);
+        box-shadow: 0 15px 40px rgba(28, 37, 35, 0.06);
+    }
+
+    .about-family-number,
+    .about-value-number {
+        display: inline-block;
+        margin-bottom: 1.5rem;
+        color: var(--teal);
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+    }
+
+    .about-family-card h3,
+    .about-value-card h3 {
+        margin: 0 0 0.75rem;
+        color: var(--text-dark);
+        font-size: 1.4rem;
+    }
+
+    .about-family-card p,
+    .about-value-card p {
+        margin: 0;
+        color: var(--text-light);
+        line-height: 1.7;
+    }
+
+
+    /* OUR APPROACH */
+
+    .about-approach {
+        padding: 8rem 0;
+        background: var(--white);
+    }
+
+    .about-section-heading {
+        max-width: 750px;
+        margin-bottom: 4rem;
+    }
+
+    .about-section-heading > p:last-child {
+        max-width: 600px;
+        color: var(--text-light);
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+    .about-values-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .about-value-card {
+        min-height: 280px;
+        padding: 2.5rem;
+        border-radius: 1.5rem;
+        background: var(--soft-blue);
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+    .about-value-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 45px rgba(28, 37, 35, 0.08);
+    }
+
+
+    /* MEET THE FROG */
+
+    .about-frog {
+        position: relative;
+        overflow: hidden;
+        padding: 8rem 0;
+        background:
+            linear-gradient(
+                135deg,
+                rgba(84, 219, 212, 0.14),
+                rgba(115, 191, 104, 0.16)
+            );
+    }
+
+    .about-frog-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+        gap: 6rem;
+        align-items: center;
+    }
+
+    .about-frog-art {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 500px;
+    }
+
+    .about-frog-placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: min(100%, 450px);
+        aspect-ratio: 1;
+        border: 2px dashed rgba(66, 157, 142, 0.35);
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.55);
+        text-align: center;
+    }
+
+    .about-frog-placeholder span {
+        font-size: 8rem;
+    }
+
+    .about-frog-placeholder p {
+        margin: 1rem 0 0;
+        color: var(--teal);
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.15em;
+    }
+
+    .about-frog-image {
+        display: block;
+        width: min(100%, 500px);
+        max-height: 550px;
+        object-fit: contain;
+    }
+
+    .about-frog-fact {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-top: 2rem;
+        padding: 1.25rem 0;
+        border-top: 1px solid rgba(66, 157, 142, 0.25);
+        border-bottom: 1px solid rgba(66, 157, 142, 0.25);
+    }
+
+    .about-frog-fact-label {
+        color: var(--text-light);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    .about-frog-fact strong {
+        color: var(--text-dark);
+    }
+
+
+    /* SOCIAL */
+
+    .about-social {
+        padding: 8rem 0 10rem;
+        background: var(--white);
+    }
+
+    .about-social-grid {
+        display: grid;
+        grid-template-columns: 0.8fr 1fr;
+        gap: 6rem;
+        align-items: center;
+    }
+
+    .about-social-links {
+        position: relative;
+        display: grid;
+        gap: 1.25rem;
+    }
+
+    .about-social-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 2rem;
+        border: 1px solid rgba(66, 157, 142, 0.18);
+        border-radius: 1.4rem;
+        background: var(--soft-blue);
+        color: var(--text-dark);
+        text-decoration: none;
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease,
+            border-color 0.25s ease;
+    }
+
+    .about-social-card:hover {
+        transform: translateX(6px);
+        border-color: var(--teal);
+        box-shadow: 0 15px 35px rgba(28, 37, 35, 0.07);
+    }
+
+    .about-social-card div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-social-label {
+        margin-bottom: 0.25rem;
+        color: var(--text-light);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    .about-social-card strong {
+        font-size: 1.4rem;
+    }
+
+    .about-social-arrow {
+        color: var(--teal);
+        font-size: 1.75rem;
+    }
+
+
+    /* FINAL CTA */
+
+    .about-cta {
+        position: relative;
+        isolation: isolate;
+        padding: 6rem 2rem;
+        background: linear-gradient(120deg, var(--teal), var(--green));
+        color: var(--white);
+        text-align: center;
+    }
+
+    .about-cta-wave {
+        position: absolute;
+        bottom: calc(100% - 1px);
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 90px;
+        pointer-events: none;
+    }
+
+    .about-cta-content {
+        position: relative;
+    }
+
+    .about-cta .section-eyebrow {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .about-cta h2 {
+        margin: 0 0 1.25rem;
+        color: var(--white);
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        line-height: 1.05;
+        letter-spacing: -0.035em;
+    }
+
+    .about-cta p:not(.section-eyebrow) {
+        margin: 0 auto 2rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.05rem;
+    }
+
+    .about-cta-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 1.5rem;
+        border-radius: 999px;
+        background: var(--white);
+        color: var(--teal);
+        font-weight: 800;
+        text-decoration: none;
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+    .about-cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 35px rgba(28, 37, 35, 0.18);
+    }
+
+    .about-frog-wave {
+        height: 45px;
+    }   
 }
 
 @media (max-width: 480px) {
