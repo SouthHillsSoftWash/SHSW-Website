@@ -2611,3 +2611,451 @@ a {
     fill: #eef8f3;
     pointer-events: none;
 }
+
+/* ===== END OF ABOUT PAGE ===== */
+/* ========================= */
+/* ===== START OF AREAS SERVED PAGE ===== */
+
+.areas-page-container {
+    width: min(1200px, calc(100% - 4rem));
+    margin: 0 auto;
+}
+
+
+/* HERO */
+
+.areas-hero {
+    position: relative;
+    isolation: isolate;
+    padding: 12rem 2rem 9rem;
+    background: var(--soft-blue);
+    overflow: hidden;
+}
+
+.areas-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    transform: translateX(-10rem);
+}
+
+.areas-check-heading {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.areas-hero h1 {
+    margin: 0 0 1.75rem;
+    color: var(--text-dark);
+    font-size: clamp(3rem, 6vw, 5.75rem);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+}
+
+.areas-hero-description {
+    max-width: 750px;
+    margin: 0;
+    color: var(--text-light);
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.areas-hero-wave {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    height: 90px;
+    fill: var(--white);
+    pointer-events: none;
+}
+
+
+/* INTRO */
+
+.areas-intro {
+    padding: 7rem 0 8rem;
+    background: var(--white);
+}
+
+.areas-intro, .areas-hero span {
+    color: var(--teal);
+}
+
+.areas-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 4rem;
+    align-items: start;
+}
+
+.areas-intro-heading {
+    min-width: 0;
+}
+
+.areas-intro-heading h2 {
+    max-width: 620px;
+    text-wrap: balance;
+}
+
+.areas-intro-heading h2,
+.areas-section-heading h2,
+.areas-check-heading h2 {
+    margin: 0;
+    color: var(--text-dark);
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+}
+
+.areas-intro-copy p,
+.areas-check-copy p {
+    margin: 0 0 1.25rem;
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* SHARED SECTION HEADING */
+
+.areas-section-heading {
+    max-width: 750px;
+    margin-bottom: 3.5rem;
+}
+
+.areas-section-heading > p:last-child {
+    max-width: 650px;
+    margin: 1.5rem 0 0;
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.areas-map-section .areas-section-heading {
+    max-width: 760px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.areas-map-section .areas-section-heading > p:last-child {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* MAP */
+
+.areas-map-section {
+    padding: 8rem 0;
+    background: var(--off-white);
+}
+
+.areas-map-shell {
+    overflow: hidden;
+    border-radius: 2rem;
+    background: var(--white);
+    box-shadow: 0 20px 55px rgba(28, 37, 35, 0.09);
+}
+
+.areas-map {
+    width: 100%;
+    height: 460px;
+    z-index: 1;
+}
+
+.areas-map-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    background: var(--white);
+}
+
+.areas-map-note-icon {
+    flex: 0 0 auto;
+    margin-top: 0.25rem;
+    color: var(--teal);
+    font-size: 0.85rem;
+}
+
+.areas-map-note p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+/* CUSTOM LEAFLET MARKERS */
+
+.areas-map-marker-wrapper {
+    background: transparent;
+    border: 0;
+}
+
+.areas-map-marker {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    border: 4px solid var(--white);
+    border-radius: 50% 50% 50% 0;
+    background: var(--teal);
+    box-shadow: 0 5px 12px rgba(28, 37, 35, 0.25);
+    transform: rotate(-45deg);
+}
+
+.areas-map-marker-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--white);
+    transform: translate(-50%, -50%);
+}
+
+
+/* COMMUNITIES */
+
+.areas-communities {
+    padding: 8rem 0 10rem;
+    background: var(--white);
+}
+
+.areas-community-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.areas-community-card {
+    min-width: 0;
+    padding: 2.25rem 2rem;
+    border: 1px solid rgba(66, 157, 142, 0.14);
+    border-radius: 1.5rem;
+    background: var(--soft-blue);
+}
+
+.areas-community-number {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--teal);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.areas-community-card h3 {
+    margin: 0 0 1.5rem;
+    color: var(--text-dark);
+    font-size: 1.5rem;
+}
+
+.areas-community-card ul {
+    display: grid;
+    gap: 0.8rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.areas-community-card li {
+    position: relative;
+    padding-left: 1.4rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+.areas-community-card li::before {
+    content: "";
+    position: absolute;
+    top: 0.65em;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+}
+
+.areas-communities .areas-section-heading {
+    max-width: 760px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.areas-communities .areas-section-heading > p:last-child {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* LITTLE PRESSURE, BIG CLEAN */
+
+.areas-brand-statement {
+    position: relative;
+    isolation: isolate;
+    padding: 2rem;
+    background: var(--teal);
+    text-align: center;
+}
+
+.areas-brand-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 1200px);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.areas-brand-statement p,
+.areas-brand-statement h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.areas-brand-statement p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.areas-brand-statement h2 {
+    margin: 0.25rem 0 0;
+    color: var(--white);
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.areas-brand-wave {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 90px;
+    pointer-events: none;
+}
+
+.areas-brand-wave-top {
+    bottom: calc(100% - 1px);
+    fill: var(--teal);
+}
+
+
+/* DON'T SEE YOUR AREA */
+
+.areas-check {
+    padding: 9rem 0 10rem;
+    background: #eef8f3;
+}
+
+.areas-check-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    gap: 7rem;
+    align-items: start;
+}
+
+.areas-check-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-top: 0.75rem;
+    color: var(--teal);
+    font-weight: 800;
+    text-decoration: none;
+    transition: gap 0.25s ease;
+}
+
+.areas-check-link:hover {
+    gap: 1rem;
+}
+
+
+/* FINAL CTA */
+
+.areas-cta {
+    position: relative;
+    isolation: isolate;
+    padding: 6rem 2rem;
+    background: linear-gradient(120deg, var(--teal), var(--green));
+    color: var(--white);
+    text-align: center;
+}
+
+.areas-cta-wave {
+    position: absolute;
+    bottom: calc(100% - 1px);
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 90px;
+    pointer-events: none;
+}
+
+.areas-cta-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(100%, 900px);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.areas-cta .section-eyebrow {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.areas-cta h2 {
+    max-width: 800px;
+    margin: 0 auto 1.25rem;
+    color: var(--white);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+}
+
+.areas-cta p:not(.section-eyebrow) {
+    max-width: 650px;
+    margin: 0 auto 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.areas-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border-radius: 999px;
+    background: var(--white);
+    color: var(--teal);
+    font-weight: 800;
+    text-decoration: none;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.areas-cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 35px rgba(28, 37, 35, 0.18);
+}
+
+.areas-brand-wave-bottom {
+    top: calc(100% - 1px);
+    fill: var(--teal);
+    z-index: 2;
+}
