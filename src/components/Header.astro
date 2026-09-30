@@ -19,7 +19,7 @@
                     <a href="/">Home</a>
                 </li>
 
-                <li class="dropdown">
+                <li>
                     <a href="/about/">About Us</a>
                 </li>
 
@@ -87,6 +87,12 @@
     const mainNav = document.querySelector(".main-nav");
 
     menuToggle?.addEventListener("click", () => {
-        mainNav?.classList.toggle("is-open");
+        const isOpen = mainNav?.classList.toggle("is-open") ?? false;
+
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
     });
 </script>
