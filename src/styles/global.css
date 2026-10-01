@@ -2358,9 +2358,9 @@ a {
 .about-frog-art {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
-    min-height: 500px;
+    min-width: 0;
 }
 
 .about-frog-placeholder {
@@ -2390,9 +2390,10 @@ a {
 
 .about-frog-image {
     display: block;
-    width: min(100%, 500px);
-    max-height: 550px;
+    width: min(100%, 430px);
+    height: auto;
     object-fit: contain;
+    filter: drop-shadow(0 18px 24px rgba(28, 37, 35, 0.12));
 }
 
 .about-frog-fact {
@@ -2944,6 +2945,25 @@ a {
 .areas-brand-wave-top {
     bottom: calc(100% - 1px);
     fill: var(--teal);
+}
+
+/* Scrubby peek */
+
+.areas-brand-scrubby {
+    position: absolute;
+    right: clamp(0.5rem, 4vw, 4rem);
+    bottom: calc(100% - -35px);
+    z-index: 2;
+    width: clamp(150px, 15vw, 230px);
+    pointer-events: none;
+    transform: rotate(3deg);
+}
+
+.areas-brand-scrubby img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 12px 18px rgba(28, 37, 35, 0.12));
 }
 
 
