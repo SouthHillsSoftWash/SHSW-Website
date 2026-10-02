@@ -151,6 +151,10 @@
         padding: 2rem;
     }
 
+    .service-hero-scrubby {
+        display: none;
+    }
+
     .popular-services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -176,6 +180,11 @@
     .areas-description {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .areas-map-scrubby {
+        right: clamp(2rem, 12vw, 10rem);
+        transform: translateY(-20%);
     }
 
     .about-story-grid,
@@ -271,6 +280,17 @@
     .areas-description {
         margin-left: auto;
         margin-right: auto;
+    }
+    
+    .areas-map-scrubby {
+        position: relative;
+        display: block;
+        width: min(260px, 65vw);
+        top: auto;
+        right: auto;
+        margin: 0 auto 1rem;
+        transform: none;
+        z-index: 1;
     }
 
     #service-map {
@@ -445,10 +465,10 @@
     }
 
     .about-frog-copy {
-        order: 2;
         width: 100%;
         max-width: 650px;
         margin: 0 auto;
+        padding-inline: 1.5rem;
     }
 
     .about-frog-image {
@@ -465,6 +485,64 @@
 }
 
 @media (max-width: 600px) {
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header-container {
+        padding: 0.65rem 1rem;
+        gap: 0.75rem;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .logo img {
+        height: 55px;
+        width: auto;
+    }
+
+    .quote-button {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+
+        width: 44px;
+        height: 44px;
+        margin-left: auto;
+        padding: 0;
+    }
+
+    .menu-toggle span {
+        width: 24px;
+        height: 3px;
+    }
+
+    .main-nav.is-open .mobile-quote-item {
+        display: block;
+        margin-top: 0.75rem;
+    }
+
+    .mobile-quote-button {
+        display: block;
+        width: 100%;
+        padding: 0.85rem 1rem !important;
+        background-color: var(--orange);
+        color: var(--white) !important;
+        border-radius: 0.5rem;
+        font-size: 0.8rem !important;
+        font-weight: 800 !important;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
 
     /* =========================
        HOME HERO
@@ -556,6 +634,12 @@
         min-height: 300px;
     }
 
+    .areas-map-scrubby {
+        width: 155px;
+        left: 5.5rem;
+        transform: translateY(-530%);
+    }
+
     .contact-page-container {
         width: min(100% - 2rem, 1200px);
     }
@@ -593,10 +677,10 @@
     }
 
     .about-frog-copy {
-        order: 2;
         width: 100%;
         max-width: none;
-        margin: 0;
+        margin: 0 auto;
+        padding-inline: 1.25rem;
     }
 
     .about-frog-copy h2 {
@@ -615,5 +699,9 @@
     .areas-brand-scrubby {
         right: 1rem;
         width: 115px;
+    }
+
+    .about-frog-fact {
+        gap: 1rem;
     }
 }
