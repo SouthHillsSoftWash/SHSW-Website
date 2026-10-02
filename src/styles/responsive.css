@@ -580,6 +580,10 @@
         white-space: nowrap;
     }
 
+    .popular-services-grid {
+        grid-template-columns: 1fr;
+    }
+
 
     /* =========================
        HOME SERVICE MAP
@@ -637,7 +641,6 @@
     .areas-map-scrubby {
         width: 155px;
         left: 5.5rem;
-        transform: translateY(-530%);
     }
 
     .contact-page-container {
