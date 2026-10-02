@@ -639,8 +639,9 @@
     }
 
     .areas-map-scrubby {
-        width: 155px;
-        left: 5.5rem;
+        width: 180px;
+        margin-left: calc(50% - 110px);
+        margin-right: auto;
     }
 
     .contact-page-container {
