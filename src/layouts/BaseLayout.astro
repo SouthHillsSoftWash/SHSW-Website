@@ -1,37 +1,73 @@
 ---
 import "../styles/global.css";
 import "../styles/responsive.css";
-import Header from "../components/Header.astro";
-import Hero from "../components/Hero.astro";
-import Footer from "../components/Footer.astro";
 
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import LocalBusinessSchema from "../components/LocalBusinessSchema.astro";
 
 interface Props {
     title: string;
     description?: string;
+    image?: string;
+    noindex?: boolean;
 }
 
 const {
     title,
-    description = "Professional residential and commercial exterior cleaning from South Hills Soft Wash."
-    } = Astro.props;
+    description = "Professional residential and commercial exterior cleaning from South Hills Soft Wash.",
+    image = "/images/logo.png",
+    noindex = false,
+} = Astro.props;
+
+const siteUrl = "https://www.southhillssoftwash.com";
+const pageTitle = `${title} | South Hills Soft Wash`;
+
+const canonicalURL = new URL(Astro.url.pathname, siteUrl);
+const socialImageURL = new URL(image, siteUrl);
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta name="description" content={description} />
-		<title>{title} | South Hills Soft Wash</title>
-	</head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<body>
+        <!-- Primary SEO -->
+        <title>{pageTitle}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonicalURL} />
+
+        <!-- Search Engine Indexing -->
+        {noindex && (
+            <meta name="robots" content="noindex, nofollow" />
+        )}
+
+        <!-- Open Graph / Social Sharing -->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="South Hills Soft Wash" />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:image" content={socialImageURL} />
+
+        <!-- Twitter / X Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={socialImageURL} />
+
+        <!-- Local Business Structured Data -->
+        <LocalBusinessSchema />
+    </head>
+
+    <body>
         <Header />
-		<main>
-			<slot />
-		</main>
-		<Footer />
-	</body>
-</html>
 
+        <main>
+            <slot />
+        </main>
+
+        <Footer />
+    </body>
+</html>

@@ -1,0 +1,33 @@
+---
+const schema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.southhillssoftwash.com/#business",
+
+    name: "South Hills Soft Wash",
+
+    url: "https://www.southhillssoftwash.com/",
+
+    telephone: "+1-412-654-2449",
+
+    email: "southhillssoftwash@gmail.com",
+
+    description:
+        "South Hills Soft Wash provides residential and commercial exterior cleaning services throughout the South Hills and surrounding Pennsylvania communities.",
+
+    areaServed: {
+        "@type": "Place",
+        name: "South Hills, Pennsylvania"
+    },
+
+    sameAs: [
+        "https://www.facebook.com/southhillssoftwash/",
+        "https://www.tiktok.com/@southhillssoftwash"
+    ]
+};
+---
+
+<script
+    type="application/ld+json"
+    set:html={JSON.stringify(schema)}
+></script>
