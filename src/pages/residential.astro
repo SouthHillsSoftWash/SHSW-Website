@@ -1,4 +1,3 @@
-
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import FinalCTA from "../components/FinalCTA.astro";
@@ -7,52 +6,55 @@ const services = [
     {
         id: "house-washing",
         title: "House Washing",
-        description: "Refresh your home's exterior by removing built-up dirt and grime.",
+        description:
+            "Refresh your home's exterior by removing built-up dirt and grime.",
         image: "/images/residential/house_washing.jpg",
-        detailUrl: "/residential/house-washing/"
+        detailUrl: "/residential/house-washing/",
     },
     {
         id: "roof-cleaning",
         title: "Roof Cleaning",
-        description: "Help restore your roof's appearance with exterior cleaning.",
+        description:
+            "Help restore your roof's appearance with exterior cleaning.",
         image: "/images/residential/roof_cleaning.jpg",
-        detailUrl: "/residential/roof-cleaning/"
+        detailUrl: "/residential/roof-cleaning/",
     },
     {
         id: "gutter-cleaning",
         title: "Gutter Cleaning",
-        description: "Address buildup that affects the appearance of your gutters.",
+        description:
+            "Address buildup that affects the appearance of your gutters.",
         image: "/images/residential/gutter_cleaning.jpg",
-        detailUrl: "/residential/gutter-cleaning/"
+        detailUrl: "/residential/gutter-cleaning/",
     },
     {
         id: "driveway-cleaning",
         title: "Driveway Cleaning",
         description: "Give your driveway a cleaner, refreshed appearance.",
         image: "/images/residential/driveway_cleaning.jpg",
-        detailUrl: "/residential/driveway-cleaning/"
+        detailUrl: "/residential/driveway-cleaning/",
     },
     {
         id: "fence-cleaning",
         title: "Fence Cleaning",
         description: "Refresh fencing affected by outdoor dirt and buildup.",
         image: "/images/residential/fence_cleaning.jpg",
-        detailUrl: "/residential/fence-cleaning/"
+        detailUrl: "/residential/fence-cleaning/",
     },
     {
         id: "deck-cleaning",
         title: "Deck Cleaning",
         description: "Bring a cleaner look to your outdoor living space.",
         image: "/images/residential/deck_cleaning.jpg",
-        detailUrl: "/residential/deck-cleaning/"
+        detailUrl: "/residential/deck-cleaning/",
     },
     {
         id: "rust-removal",
         title: "Rust Removal",
         description: "Address visible rust staining on exterior surfaces.",
         image: "/images/residential/rust_cleaning.jpg",
-        detailUrl: "/residential/rust-removal/"
-    }
+        detailUrl: "/residential/rust-removal/",
+    },
 ];
 ---
 
@@ -60,15 +62,13 @@ const services = [
     title="Residential Exterior Cleaning"
     description="Explore residential exterior cleaning from South Hills Soft Wash, including house washing, roof cleaning, gutter cleaning, driveway cleaning, deck cleaning, and more."
 >
-
     <section class="residential-hero">
         <div class="residential-container">
             <p class="section-eyebrow">Our Services</p>
             <h1>Residential Exterior Cleaning</h1>
             <p>
-                From your home's exterior to the spaces where you
-                spend time outdoors, explore our residential
-                cleaning services.
+                From your home's exterior to the spaces where you spend time
+                outdoors, explore our residential cleaning services.
             </p>
         </div>
 
@@ -80,53 +80,58 @@ const services = [
         >
             <path
                 d="M0,35 C240,90 480,0 720,42 S1200,90 1440,30 L1440,100 L0,100 Z"
-            />
+            ></path>
         </svg>
-
     </section>
 
     <section class="residential-services">
         <div class="residential-container">
+            {
+                services.map((service, index) => (
+                    <article
+                        id={service.id}
+                        class:list={[
+                            "residential-service",
+                            { "residential-service-reverse": index % 2 !== 0 },
+                        ]}
+                    >
+                        <div class="residential-service-content">
+                            <span class="residential-service-number">
+                                {String(index + 1).padStart(2, "0")}
+                            </span>
 
-            {services.map((service, index) => (
-                <article
-                    id={service.id}
-                    class:list={[
-                        "residential-service",
-                        { "residential-service-reverse": index % 2 !== 0 }
-                    ]}
-                >
-                    <div class="residential-service-content">
-                        <span class="residential-service-number">
-                            {String(index + 1).padStart(2, "0")}
-                        </span>
+                            <h2>{service.title}</h2>
+                            <p>{service.description}</p>
 
-                        <h2>{service.title}</h2>
-                        <p>{service.description}</p>
+                            <div class="residential-service-actions">
+                                <a
+                                    href={service.detailUrl}
+                                    class="residential-detail-link"
+                                >
+                                    More About {service.title}
+                                    <span aria-hidden="true">→</span>
+                                </a>
 
-                        <div class="residential-service-actions">
-                            <a href={service.detailUrl} class="residential-detail-link">
-                                More About {service.title}
-                                <span aria-hidden="true">→</span>
-                            </a>
-
-                            <a href="/contact/" class="residential-service-link">
-                                Request a Free Quote
-                                <span aria-hidden="true">→</span>
-                            </a>
+                                <a
+                                    href="/contact/"
+                                    class="residential-service-link"
+                                >
+                                    Request a Free Quote
+                                    <span aria-hidden="true">→</span>
+                                </a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="residential-service-visual">
-                        <img
-                            src={service.image}
-                            alt={`${service.title} by South Hills Soft Wash`}
-                            loading="lazy"
-                        />
-                    </div>
-                </article>
-            ))}
-
+                        <div class="residential-service-visual">
+                            <img
+                                src={service.image}
+                                alt={`${service.title} by South Hills Soft Wash`}
+                                loading="lazy"
+                            />
+                        </div>
+                    </article>
+                ))
+            }
         </div>
     </section>
 

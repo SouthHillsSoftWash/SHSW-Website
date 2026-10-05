@@ -16,35 +16,31 @@ const projects = Array.from({ length: 16 }, (_, index) => {
     title="Our Work"
     description="See exterior cleaning projects completed by South Hills Soft Wash for residential and commercial properties throughout the South Hills and surrounding communities."
 >
-
     <section class="work-page">
         <div class="work-page-container">
-
             <div class="section-heading">
                 <p class="section-eyebrow">Real Results</p>
                 <h1>Our Work</h1>
 
                 <p>
-                    See the difference a professional exterior cleaning
-                    can make. Explore our before-and-after gallery.
+                    See the difference a professional exterior cleaning can
+                    make. Explore our before-and-after gallery.
                 </p>
             </div>
 
             <div class="work-gallery">
-                {projects.map((project) => (
-                    <article class="work-gallery-item">
-
-                        <BeforeAfterSlider
-                            before={project.before}
-                            after={project.after}
-                            alt={`Before and after exterior cleaning`}
-                        />
-
-                    </article>
-                ))}
+                {
+                    projects.map((project) => (
+                        <article class="work-gallery-item">
+                            <BeforeAfterSlider
+                                before={project.before}
+                                after={project.after}
+                                alt={`Before and after exterior cleaning`}
+                            />
+                        </article>
+                    ))
+                }
             </div>
-
         </div>
     </section>
-
 </BaseLayout>
